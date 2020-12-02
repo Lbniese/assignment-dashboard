@@ -52,8 +52,12 @@ public class HomeController {
     @GetMapping("/assignment/delete/{id}")
     public String deleteAssignment(@PathVariable("id") int id) {
         logger.info("[GET] Calling delete assignment");
-        assignmentService.delete(id);
-        return "redirect:/crud";
+        Boolean deleted = assignmentService.delete(id);
+        if(deleted){
+            return "redirect:/crud";
+        } else {
+            return "home/index";
+        }
     }
 
     @GetMapping("/assignment/update/{id}")
