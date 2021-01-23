@@ -58,7 +58,7 @@ class AssignmentRepoTest {
     public void testDeleteAssignment() {
         assignmentRepo.create(new Assignment("Test Name", "Test Desc"));
         List<Assignment> assignments = assignmentRepo.fetchByName("Test Name");
-        //assignmentRepo.delete(assignments.get(0).getId());
+        assignmentRepo.delete(assignments.get(0).getId());
         assignments = assignmentRepo.fetchByName("Test Name");
         assertEquals(0, assignments.size());
 
