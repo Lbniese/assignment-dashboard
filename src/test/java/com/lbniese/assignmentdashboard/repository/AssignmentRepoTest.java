@@ -33,6 +33,10 @@ class AssignmentRepoTest {
 
     }
 
+    @Test
+    public void testTrue(){
+        assertTrue(1 == 2);
+    }
 
     @Test
     public void testIdFetchAssignmentById() {
