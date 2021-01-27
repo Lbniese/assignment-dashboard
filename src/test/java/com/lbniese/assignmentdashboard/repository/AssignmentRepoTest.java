@@ -82,4 +82,9 @@ class AssignmentRepoTest {
         assertTrue(assignments.size() >= 2);
     }
 
+    @Test
+    public void testExam(){
+        assertTrue(1==2);
+    }
+
 }
