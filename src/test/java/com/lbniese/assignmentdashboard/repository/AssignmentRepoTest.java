@@ -81,10 +81,4 @@ class AssignmentRepoTest {
         List<Assignment> assignments = assignmentRepo.fetchAll();
         assertTrue(assignments.size() >= 2);
     }
-
-    @Test
-    public void testExam(){
-        assertTrue(1==2);
-    }
-
 }
